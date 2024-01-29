@@ -18,6 +18,35 @@ rowContainer.forEach((row) => {
 });
 
 
+const cells = document.querySelectorAll('.container .row .cell');
+
+
+
+    // and for each one we add a 'click' listener
+gridContainer.addEventListener('mouseover', (event) => {
+    event.target.classList.add('colourMode');
+});
+
+
+
+
+/*cells.addEventListener("mousedown", () => {
+    gridContainer.addEventListener("mouseover", () => {
+     
+        cells.forEach((cell) => {
+            
+            cell.style.cssText = 'background-color: red;';  
+          });
+    });
+  });
+
+window.addEventListener("mouseup", () => {
+    gridContainer.removeEventListener("mouseover", function(e) {
+        console.log(e);
+    });
+  });
+
+*/
 
 /*const row1 = document.createElement('div');
 const row2 = document.createElement('div');

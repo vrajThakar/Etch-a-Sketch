@@ -1,7 +1,11 @@
-.container {
+.body{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+
     outline: 1px solid black;
     width: 32em;
     height: 32em;
@@ -22,6 +26,9 @@
     width: 2em;
     height: 2em;
 
+}
 
 
+.colourMode {
+    background-color: #000;
 }
