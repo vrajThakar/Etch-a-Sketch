@@ -27,6 +27,19 @@ gridContainer.addEventListener('mouseover', (event) => {
     event.target.classList.add('colourMode');
 });
 
+let child_class = gridContainer.children;
+
+
+const btn = document.querySelector('#reset-btn');
+btn.addEventListener('click', () => {
+  for (let i = 0; i<child_class.length; i++) {
+    let cell_class = child_class[i].children
+    for (let j = 0; j <cell_class.length; j++) {
+        cell_class[j].classList.remove("colourMode")
+    }
+  }
+});
+
 
 
 
