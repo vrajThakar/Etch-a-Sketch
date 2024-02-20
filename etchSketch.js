@@ -1,24 +1,33 @@
+let grid_size = prompt("Enter a number between 1 - 100")
+
 const gridContainer = document.querySelector('.container');
 
-for (let i = 1; i <= 16; i++) {
-    const row = document.createElement('div');
-    row.classList.add('row');
-    gridContainer.appendChild(row);
+for (let i = 1; i <= grid_size*grid_size; i++) {
+    const cell = document.createElement('div');
+    cell.classList.add('cell');
+    let width =  32 / grid_size
+    let height = 32 / grid_size
+    cell.style.width = width + 'em';
+    cell.style.height = height + 'em';
+
+    gridContainer.appendChild(cell);
     
 }
 
-const rowContainer = document.querySelectorAll('.container .row')
+// const rowContainer = document.querySelectorAll('.container .row')
 
-rowContainer.forEach((row) => {
-    for (let i = 1; i <= 16; i++) {
-        const cell = document.createElement('div');
-        cell.classList.add('cell');
-        row.appendChild(cell);
-    }
-});
+// rowContainer.forEach((row) => {
+//     for (let i = 1; i <= grid_size; i++) {
+//         const cell = document.createElement('div');
+//         cell.classList.add('cell');
+//         row.appendChild(cell);
+//     }
+// });
 
 
-const cells = document.querySelectorAll('.container .row .cell');
+///main code
+
+// const cells = document.querySelectorAll('.container .cell');
 
 
 
@@ -33,14 +42,11 @@ let child_class = gridContainer.children;
 const btn = document.querySelector('#reset-btn');
 btn.addEventListener('click', () => {
   for (let i = 0; i<child_class.length; i++) {
-    let cell_class = child_class[i].children
-    for (let j = 0; j <cell_class.length; j++) {
-        cell_class[j].classList.remove("colourMode")
-    }
+    child_class[i].classList.remove("colourMode")
   }
 });
 
-
+////////////////
 
 
 /*cells.addEventListener("mousedown", () => {

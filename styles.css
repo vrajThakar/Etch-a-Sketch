@@ -4,10 +4,13 @@
     align-items: center;
     width: 660px;
     height: 660px;
+    flex-grow: 1;
 
  
 }
 .container {
+    display: flex;
+    flex-wrap: wrap;
     outline: 1px solid black;
     width: 32em;
     height: 32em;
@@ -25,8 +28,7 @@
 
 .cell {
     outline: 1px solid black;
-    width: 2em;
-    height: 2em;
+ 
 
 }
 
